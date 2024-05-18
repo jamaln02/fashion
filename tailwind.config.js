@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
 import withMT from "@material-tailwind/react/utils/withMT";
 export default withMT({
-  safelist: ["bg-hero", "bg-about"],
   content: [
     "./index.html",
     "./src/**/*.{js,jsx}",
@@ -20,8 +20,8 @@ export default withMT({
         footer: "#000015",
       },
       backgroundImage: {
-        hero: "url(./src/assets/hero-1.png)",
-        about: "url(./src/assets/about-us.jpg)",
+        hero: "url('./src/assets/hero-1.png')",
+        about: "url('./src/assets/about-us.jpg')",
       },
     },
   },
