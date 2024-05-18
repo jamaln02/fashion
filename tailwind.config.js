@@ -19,7 +19,7 @@ export default withMT({
         footer: "#000015",
       },
       backgroundImage: {
-        hero: "url(./src/assets/hero-1.jpg)",
+        hero: "url(./src/assets/hero-1.png)",
         about: "url(./src/assets/about-us.jpg)",
       },
     },
