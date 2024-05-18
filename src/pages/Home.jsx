@@ -34,7 +34,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container mt-5 pt-5">
-        <div className=" ms-56 flex items-center justify-center">
+        <div className="ms-56 flex items-center justify-center">
           <div className="">
             <div>
               <h1 className="text-4xl font-medium my-3">
