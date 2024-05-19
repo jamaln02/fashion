@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className="w-full h-full">
       <div
-        style={{ backgroundImage: hero }}
+        style={{ backgroundImage: `${hero}` }}
         className=" h-[45em] bg-no-repeat bg-cover bg-top"
       >
         <div className="container h-96 w-full mx-7 ">
