@@ -7,11 +7,17 @@ import foo1 from "../assets/1fo.jpg";
 import foo2 from "../assets/2foo.jpg";
 import about from "../assets/about-us.jpg";
 import foo4 from "../assets/4foo.jpg";
+import hero from "../assets/hero-1.png";
+import aboutus from "../assets/about-us.jpg";
 import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div className="w-full h-full">
-      <div className=" h-[45em] bg-hero bg-no-repeat bg-cover bg-top">
+      <div
+        style={{ backgroundImage: hero }}
+        className=" h-[45em] bg-no-repeat bg-cover bg-top"
+      >
         <div className="container h-96 w-full mx-7 ">
           <div className="w-[27rem] h-96 flex flex-col justify-around ms-4 ">
             <h6 className="text-herored font-bold text-[1rem] uppercase mt-48 leading-[5rem] mb-3">
