@@ -3,22 +3,6 @@ import AdmainLayout from "./AllLayout/AdmainLayout";
 import Layout from "./AllLayout/Layout";
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import firebase from "firebase/app";
-// import "firebase/firestore";
-// import { initializeApp } from "firebase/app";
-
-// // Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-// // TODO: Add SDKs for Firebase products that you want to use
-// // https://firebase.google.com/docs/web/setup#available-libraries
-
-// // Your web app's Firebase configuration
-// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-// // Initialize Firebase
-
-// // TODO: Replace the following with your app's Firebase project configuration
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -29,26 +13,11 @@ function App() {
   const [userLogged, setUserLogged] = useState({});
   const [isUpdated, setIsUpdated] = useState(false);
 
-  // const app = initializeApp(firebaseConfig);
-
-  // const analytics = getAnalytics(app);
-
-  // const firebaseConfig = {
-  //   apiKey: "AIzaSyALiqDk1QhzVZrooM4vUQpyR9XahkSrVIs",
-  //   authDomain: "fashione-1.firebaseapp.com",
-  //   projectId: "fashione-1",
-  //   storageBucket: "fashione-1.appspot.com",
-  //   messagingSenderId: "216666759210",
-  //   appId: "1:216666759210:web:e0aad4ed8f4fc301c8e353",
-  //   measurementId: "G-R6N4P8HFZM",
-  // };
-
   useEffect(() => {
     if (localStorage.l == true) {
       axios({
         method: "get",
-
-        url: `https://jamaln02.github.io/fashion-backend/db.json/users/${localStorage.k}`,
+        url: `https://fashone-project.onrender.com/users/${localStorage.k}`,
       }).then((userData) => {
         setUserLogged(userData.data);
       });
@@ -59,7 +28,7 @@ function App() {
     if (userId !== null) {
       axios({
         method: "get",
-        url: `https://jamaln02.github.io/fashion-backend/db.json/users/${userId}`,
+        url: `https://fashone-project.onrender.com/users/${userId}`,
       }).then((userData) => {
         setUserLogged(userData.data);
       });
@@ -69,14 +38,14 @@ function App() {
   const getProducts = () => {
     axios({
       method: "get",
-      url: "https://jamaln02.github.io/fashion-backend/db.json/products",
+      url: "https://fashone-project.onrender.com/products",
     }).then((data) => setProducts(data.data));
   };
 
   const getUsers = () => {
     axios({
       method: "get",
-      url: "https://jamaln02.github.io/fashion-backend/db.json/users/",
+      url: "https://fashone-project.onrender.com/users",
     }).then((usersData) => setUsers(usersData.data));
   };
   useEffect(() => {
@@ -87,7 +56,7 @@ function App() {
     getUsers();
     getProducts();
   }, [isUpdated]);
-  console.log(getProducts(), getUsers());
+
   const addToCart = (pro) => {
     let check = carts.some((products) => products.id == pro.id);
 
@@ -135,7 +104,7 @@ function App() {
       if (curUser.role == "m") {
         axios({
           method: "patch",
-          url: `https://jamaln02.github.io/fashion-backend/db.json/users/${curUser.id}`,
+          url: `https://fashone-project.onrender.com/users/${curUser.id}`,
           data: {
             role: "a",
           },
@@ -143,7 +112,7 @@ function App() {
       } else {
         axios({
           method: "patch",
-          url: `https://jamaln02.github.io/fashion-backend/db.json/users/${curUser.id}`,
+          url: `https://fashone-project.onrender.com/users/${curUser.id}`,
           data: {
             role: "m",
           },
@@ -156,13 +125,13 @@ function App() {
   const deletUser = (curUser) => {
     axios({
       method: "delete",
-      url: `https://jamaln02.github.io/fashion-backend/db.json/users/${curUser.id}`,
+      url: `https://fashone-project.onrender.com/users/${curUser.id}`,
     }).then(() => setIsUpdated(!isUpdated));
   };
   const deletProduct = (curProduct) => {
     axios({
       method: "delete",
-      url: `https://jamaln02.github.io/fashion-backend/db.json/users/${curProduct.id}`,
+      url: `https://fashone-project.onrender.com/products/${curProduct.id}`,
     }).then(() => setIsUpdated(!isUpdated));
   };
   return (
