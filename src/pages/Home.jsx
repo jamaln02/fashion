@@ -14,7 +14,10 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="w-full h-full">
-      <div className=" h-[45em] bg-no-repeat bg-hero bg-cover bg-top mybg">
+      <div
+        style={{ backgroundImage: `url(${hero})` }}
+        className=" h-[45em] bg-no-repeat  bg-cover bg-top mybg"
+      >
         <div className="container h-96 w-full mx-7 ">
           <div className="w-[27rem] h-96 flex flex-col justify-around ms-4 ">
             <h6 className="text-herored font-bold text-[1rem] uppercase mt-48 leading-[5rem] mb-3">
@@ -79,7 +82,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="h-[5em] bg-about bg-fixed flex items-center justify-center opacity-75">
+      <div
+        style={{ backgroundImage: `url(${about})` }}
+        className="h-[5em] bg-fixed flex items-center justify-center opacity-75"
+      >
         <h1 className="text-4xl font-medium text-white">
           Free shipping, 30-day return or refund guarantee.
         </h1>
