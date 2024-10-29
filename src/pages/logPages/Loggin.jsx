@@ -72,7 +72,7 @@ const Loggin = ({ users, setIsLogged, setUserId, getUsers }) => {
   };
 
   return (
-    <div className="bg-signup h-auto p-2">
+    <div className="bg-signup h-auto p-2 ">
       <div className="h-20"></div>
       <div className="w-full ">
         <div className="w-full flex flex-col justify-center items-center mt-16 text-center">
