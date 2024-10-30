@@ -30,12 +30,15 @@ const Home = () => {
               A specialist label creating luxury essentials. Ethically crafted
               with an unwavering commitment to exceptional quality.
             </p>
-            <button className="mt-5 px-4 py-5 bg-herored text-white font-bold flex justify-around w-52 uppercase tracking-[.25em]">
+            <Link
+              to="/products"
+              className="mt-5 px-4 py-5 bg-herored text-white font-bold flex justify-around w-52 uppercase tracking-[.25em]"
+            >
               Shop now
               <div className="text-2xl ">
                 <MdOutlineArrowRightAlt />
               </div>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -54,6 +54,7 @@ const Signup = ({ users }) => {
             gender: userGender,
             role: "m",
             img: "https://i0.wp.com/shuoutreach.com/wp-content/uploads/2022/01/person-icon.png?fit=300%2C300&ssl=1",
+            cart: [],
           },
         }).then((res) => {
           setLoading(true);
